@@ -99,7 +99,7 @@ public class EmployeeController {
         //构造条件过滤器
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper();
         //添加过滤条件
-        queryWrapper.like(StringUtils.isNotEmpty(name),Employee::getUsername,name);
+        queryWrapper.like(StringUtils.isNotEmpty(name),Employee::getName,name);
         //添加排序条件
         queryWrapper.orderByDesc(Employee::getUpdateTime);
 
